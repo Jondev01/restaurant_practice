@@ -3,25 +3,27 @@
 <head>
 	<title>Restaurant</title>
 	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
 		<ul>
-			<li>Home</li>
-			<li>About</li>
-			<li>Menu</li>
-			<li>Where</li>
+			<a href="#home"><li>Home</li></a>
+			<a href="#about"><li>About</li></a>
+			<a href="#menu"><li>Menu</li></a>
+			<a href="#where"><li>Where</li></a>
 		</ul>
 	</header>
-
+	<section id="home">
 		<div class="img_container">
 			<img src="restaurant_bg2.jpeg"/>
 			<div class="center big">the Restaurant</div>
 			<div class="bottom-left black-box">Open from 6am to 5pm</div>
 			<div class="bottom-right">15 Adr street, 5015</div>
 		</div>
+	</section>
 
-	<section class="main">
+	<section id="about">
 		<div class="container">
 			<h1> About the Restaurant </h1>
 			<p>The Restaurant was founded in 1989 by Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -39,9 +41,13 @@
 			<img src="restaurant_bg.jpeg"/>
 			<p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
 			<p><strong>Address:</strong> 15 Adr street, 5015, NY </p>
+		</div>
+	</section>
+	<section id="menu">
+		<div class="container">
 			<h1>The Menu</h1>
 			<div class="menu-container">
-				<p><span id="display-food">Eat</span><span id="display-drink">Drink</span></p>
+				<p id="menu-title"><span id="display-food">Eat</span><span id="display-drink">Drink</span></p>
 				<div id="food-menu">
 					<ul>
 						<li>
@@ -91,12 +97,17 @@
 					</ul>
 				</div>
 			</div>
-			<img/>
+			<img src="drink.jpg"/>
+		</div>
+	</section>
+	<section id="where">
+		<div class="container">
 			<h1> Where to find us </h1>
+			<div id="map"></div>
 			<p>Find us at some address at some place.</p>
 			<p><span class="black-box">FYI!</span>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
 			<p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-			<form>
+			<form class="contact-form">
 				<input type="text" placeholder="Name"/>
 				<input type="number" placeholder="How many people"/>
 				<input id="chooseDate" type="datetime-local"/>
@@ -120,5 +131,7 @@
 	document.getElementById('chooseDate').value = new Date().getToday();
 </script>
 <script src="main.js"></script>
+<!-- Needs API key to work
+ <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> -->
 </body>
 </html>
